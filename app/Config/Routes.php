@@ -38,6 +38,10 @@ $routes->group('admin', ['filter' => 'AdminAuth'], function($routes) {
     $routes->get('expense-category/edit/(:num)', 'Admin\ExpenseCategory::edit/$1');
     $routes->post('expense-category/update/(:num)', 'Admin\ExpenseCategory::update/$1');
     $routes->get('expense-category/delete/(:num)', 'Admin\ExpenseCategory::delete/$1');
+
+    // Profile
+    
+    $routes->post('profile-update', 'Admin\Profile::updateProfile');
     
     // Logout
     $routes->get('logout', 'Admin\Login::logout');

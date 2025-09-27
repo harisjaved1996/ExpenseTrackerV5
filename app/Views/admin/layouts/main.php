@@ -174,35 +174,35 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <form id="profileForm" action="/admin/profile/update" method="POST">
-                        <div class="mb-3">
-                            <label class="form-label"><strong>Name:</strong></label>
-                            <p class="form-control-plaintext"><?= session()->get('admin_name') ?? 'N/A' ?></p>
-                        </div>
+                    <form id="profileForm" action="/admin/profile-update" method="POST">
                         <div class="mb-3">
                             <label class="form-label"><strong>Email:</strong></label>
                             <p class="form-control-plaintext"><?= session()->get('admin_email') ?? 'N/A' ?></p>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label"><strong>Name:</strong></label>
+                             <input type="text" class="form-control" name="name" value="<?= session()->get('admin_name') ?? 'N/A' ?>" required>
                         </div>
                         <hr>
                         <h6><i class="fas fa-key me-2"></i>Update Password</h6>
                         <div class="mb-3">
                             <label class="form-label">Current Password</label>
-                            <input type="password" class="form-control" name="current_password" required>
+                            <input type="password" class="form-control" name="current_password">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">New Password</label>
-                            <input type="password" class="form-control" name="new_password" required>
+                            <input type="password" class="form-control" name="new_password">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Confirm New Password</label>
-                            <input type="password" class="form-control" name="confirm_password" required>
+                            <input type="password" class="form-control" name="confirm_password">
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" form="profileForm" class="btn btn-primary">
-                        <i class="fas fa-save me-2"></i>Update Password
+                        <i class="fas fa-save me-2"></i>Update Profile
                     </button>
                 </div>
             </div>
