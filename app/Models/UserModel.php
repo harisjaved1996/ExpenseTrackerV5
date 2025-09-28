@@ -39,8 +39,8 @@ class UserModel extends Model
 
     // Callbacks
     protected $allowCallbacks = true;
-    protected $beforeInsert   = ['hashPassword'];
-    protected $beforeUpdate   = ['hashPassword'];
+    // protected $beforeInsert   = ['hashPassword'];
+    // protected $beforeUpdate   = ['hashPassword'];
 
     protected function hashPassword(array $data)
     {
